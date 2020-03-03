@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息管理系统</title>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-table.css">
+
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/bootstrap-table.js"></script>
+    <script src="../js/bootstrap-table-zh-CN.js"></script>
+
+</head>
+<body>
+
+<div class="allContact">
+    <div class="title">
+        <div class="line1"></div>
+        <p>学生信息管理</p>
+        <div class="line1"></div>
+    </div>
+    <!--功能按钮-->
+    <div class="buttons">
+        <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#addModal">&nbsp;新增&nbsp;</button>
+        <button id="del" onclick="deletes()" type="button" class="btn btn-primary ">&nbsp;删除&nbsp;</button>
+    </div>
+
+    <!--表格，样式在js中定义-->
+    <table id="studentInformationTable" style="font-size: 12px">
+    </table>
+
+
+    <!-- 新增弹框 -->
+    <div id="addModal" class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #999">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">新增学生信息</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <h4>学号：</h4>
+                            <input  type="text" id="add_STUDENTID" name="STUDENTID"class="form-control"aria-describedby="basic-addon1"/>
+                        </div>
+                        <div class="col-xs-12 col-md-12">
+                            <h4>姓名：</h4>
+                            <input  type="text" id="add_NAME" name="NAME" class="form-control" aria-describedby="basic-addon1"/>
+                        </div>
+                        <div class="col-xs-12 col-md-12">
+                            <h4>学院：</h4>
+                            <input  type="text" id="add_COLLEGE" name="COLLEGE" class="form-control" aria-describedby="basic-addon1"/>
+                        </div>
+                        <div class="col-xs-12 col-md-12">
+                            <h4>专业：</h4>
+                            <input  type="text" id="add_MAJOR" name="MAJOR" class="form-control" aria-describedby="basic-addon1"/>
+                        </div>
+                        <div class="col-xs-12 col-md-12">
+                            <h4>年级：</h4>
+                            <input  type="text" id="add_GRADE" name="GRADE" class="form-control" aria-describedby="basic-addon1"/>
+                        </div>
+                        <div class="col-xs-12 col-md-12">
+                            <h4>班级：</h4>
+                            <input  type="text" id="add_CLASS" name="CLASS" class="form-control" aria-describedby="basic-addon1"/>
+                        </div>
+                        <div class="col-xs-12 col-md-12">
+                            <h4>年龄：</h4>
+                            <input  type="text" id="add_AGE" name="AGE" class="form-control" aria-describedby="basic-addon1"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" onclick="add()">新增</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 查看弹框 -->
+    <div id="checkModal" class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #999">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">查看学生信息</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <h4>学号：</h4>
+                            <input readonly="true" type="text" id="check_STUDENTID" name="STUDENTID"class="form-control"aria-describedby="basic-addon1"/><!--设置不可编辑-->
+                        </div>
+                        <div class="col-xs-12 col-md-12">
+                            <h4>姓名：</h4>
+                            <input  readonly="true" type="text" id="check_NAME" name="NAME" class="form-control" aria-describedby="basic-addon1"/>
+                        </div>
+                        <div class="col-xs-12 col-md-12">
+                            <h4>学院：</h4>
+                            <input  readonly="true" type="text" id="check_COLLEGE" name="COLLEGE" class="form-control" aria-describedby="basic-addon1"/>
+                        </div>
+                        <div class="col-xs-12 col-md-12">
+                            <h4>专业：</h4>
+                            <input  readonly="true" type="text" id="check_MAJOR" name="MAJOR" class="form-control" aria-describedby="basic-addon1"/>
+                        </div>
+                        <div class="col-xs-12 col-md-12">
+                            <h4>年级：</h4>
+                            <input  readonly="true" type="text" id="check_GRADE" name="GRADE" class="form-control" aria-describedby="basic-addon1"/>
+                        </div>
+                        <div class="col-xs-12 col-md-12">
+                            <h4>班级：</h4>
+                            <input  readonly="true" type="text" id="check_CLASS" name="CLASS" class="form-control" aria-describedby="basic-addon1"/>
+                        </div>
+                        <div class="col-xs-12 col-md-12">
+                            <h4>年龄：</h4>
+                            <input  readonly="true" type="text" id="check_AGE" name="AGE" class="form-control" aria-describedby="basic-addon1"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+                    <!--<button type="button" class="btn btn-primary" onclick="add()">新增</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 修改弹框 -->
+    <div id="editModal" class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #999">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">编辑学生信息</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <h4>学号：</h4>
+                            <input  type="text" id="edit_STUDENTID" name="STUDENTID"class="form-control"aria-describedby="basic-addon1"/>
+                        </div>
+                        <div class="col-xs-12 col-md-12">
+                            <h4>姓名：</h4>
+                            <input  type="text" id="edit_NAME" name="NAME" class="form-control" aria-describedby="basic-addon1"/>
+                        </div>
+                        <div class="col-xs-12 col-md-12">
+                            <h4>学院：</h4>
+                            <input  type="text" id="edit_COLLEGE" name="COLLEGE" class="form-control" aria-describedby="basic-addon1"/>
+                        </div>
+                        <div class="col-xs-12 col-md-12">
+                            <h4>专业：</h4>
+                            <input  type="text" id="edit_MAJOR" name="MAJOR" class="form-control" aria-describedby="basic-addon1"/>
+                        </div>
+                        <div class="col-xs-12 col-md-12">
+                            <h4>年级：</h4>
+                            <input  type="text" id="edit_GRADE" name="GRADE" class="form-control" aria-describedby="basic-addon1"/>
+                        </div>
+                        <div class="col-xs-12 col-md-12">
+                            <h4>班级：</h4>
+                            <input  type="text" id="edit_CLASS" name="CLASS" class="form-control" aria-describedby="basic-addon1"/>
+                        </div>
+                        <div class="col-xs-12 col-md-12">
+                            <h4>年龄：</h4>
+                            <input  type="text" id="edit_AGE" name="AGE" class="form-control" aria-describedby="basic-addon1"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button id="btEdit" type="button" class="btn btn-primary" >编辑</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<script src="../js/index.js"></script>
+
+</body>
+</html>

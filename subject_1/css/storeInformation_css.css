@@ -1,0 +1,368 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body,html{
+    width: 100%;
+    height: 2285px;
+    background-color: #f7f6f4;
+    display:inline;
+    color: #333;
+}
+
+.BigPicture{
+    width: 1018px;
+    height:644px;
+    background-color: black;
+    /*opacity: 0.8;*/
+    background:rgba(0,0,0,0.5);/*设置父div透明度而不影响子div*/
+    z-index:999;
+    position: absolute;
+    left: 10%;
+    top: 127%;
+    display: none;
+}
+
+.leftArrow{
+    opacity: 1;
+    position: relative;
+    width: 80px;
+    height: 100px;
+    top: 50%;
+    float: left;
+    background:url('../images/turnLeft.png');
+}
+
+.rightArrow{
+    opacity: 1;
+    position: relative;
+    width: 80px;
+    height: 100px;
+    top: 50%;
+    float: left;
+    background:url('../images/turnRight.png');
+}
+
+.showBig{
+    opacity: 1;
+    width: 592px;
+    height: 423px;
+    top:115px;
+    background: url('../images/showPicture_big.png') center center;
+    margin: 0px 133px 0px 133px;
+    position: relative;
+    float: left;
+}
+
+.out{
+    opacity: 0.5;
+    width: 64px;
+    height: 64px;
+    position: relative;
+    left: 980px;
+    top: -30px;
+    background:url('../images/out.png') center center;
+    border-radius: 64px;
+    background-color: black;
+}
+
+
+.topMenu{
+    width: 100%;
+    height: 100px;
+    background-color: #65360a;
+    background: url("../images/topMenuPicture.png") center center;
+
+}
+.menuContent {
+    width: 130px;
+    height: 100px;
+    font-family: "Microsoft YaHei";
+    font-size: 15px;
+    color: #fff;
+    float:left;
+    line-height: 100px;
+}
+.menuContent a{
+    text-decoration: none;
+    color: white;
+}
+
+.menuContentLogo{
+    width: 130px;
+    height: 100px;
+    font-family: "Microsoft YaHei";
+    font-size: 15px;
+    color: #fff;
+    float:left;
+    line-height: 100px;
+}
+.menuContent p{
+    height: 100px;
+    text-align: center;
+}
+
+#menuContent5{
+    background-color: #fff;
+    color: #65360a;
+
+}
+.content{
+    width:915px;
+    height: 100px;
+    margin: 0  auto;
+    /*margin-left:16%;*/
+}
+
+.circle{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #8e6947;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    margin-top: 4px;
+    margin-left: 18%;
+    opacity:0.5;/*设置透明度*/
+    font-family: "STXingkai";
+    font-size: 20px;
+}
+
+.circle p{
+    height: 100px;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+}
+
+.publicityShow{
+    height: 650px;
+    background-color: #fce5d4;
+}
+
+.turnLeft{
+    padding-top: 21%;
+    height: 100px;
+    width: 100px;
+    float: left;
+    opacity:0.7;/*设置透明度*/
+}
+
+.turnRight{
+    padding-top: 21%;
+    opacity:0.7;/*设置透明度*/
+    float: right;
+}
+
+.doughuntPicture{
+    padding-top: 30px;
+    width: 570px;
+    height: 590px;
+    float: left;
+}
+
+.advertisingText{
+    margin-left: 5%;
+    margin-top: 10%;
+    width: 340px;
+    height: 200px;
+    float: left;
+    color: #ee7023;
+}
+
+.firstLine{
+    width: 200px;
+    height: 35px;
+    font-family: "STHupo";
+    font-size: 35px;
+    padding-top: 37%;
+}
+
+.secondLine{
+    font-family: "STHupo";
+    width: 368px;
+    height: 90px;
+    margin-top: 5%;
+}
+.secondLineA,.secondLineB{
+    width: 180px;
+    font-size: 45px;
+    float: left;
+}
+.secondLineA{
+    border-style: solid;
+    border-color: #ee7023;
+    border-width: 2px;
+}
+
+.lastLine{
+    width: 230px;
+    font-size: 15px;
+    margin-left: 24%;
+    color: white;
+    background-color: #ee7023;
+    font-family: "Microsoft YaHei";
+}
+
+
+
+.detailedContent{
+    width: 100%;
+    height: 1415px;
+    background-color: #f7f6f4;
+}
+.packageContent{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+.leftPart{
+    width: 45%;
+    height: 100%;
+    float: left;
+}
+.leftPart1{
+    width: 100%;
+    height: 380px;
+    padding-top: 10%;
+}
+.leftPart1 p,.leftPart1 img{
+    float: right;
+}
+.leftPart1 p{
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+    float: right;
+    margin-bottom: 1%;
+}
+.leftPart2{
+    width: 100%;
+    height: 330px;
+}
+.leftPart2 p,.leftPart3 p,.leftPart4 p,.leftPart5 p,.leftPart6 p{
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+    text-align: right;
+    float: right;
+    line-height: 25px;
+}
+.leftPart3,.leftPart4,.leftPart5,.leftPart6{
+    width: 100%;
+    height: 160px;
+}
+
+.segmentingLine{
+    width: 10%;
+    height: 100%;
+    float: left;
+}
+.segmentingLine img{
+    margin-left: 40%;
+}
+.segmentingLine p{
+    color: #0d90fe;
+    font-size: 13px;
+    margin-left: 23%;
+    margin-top: 18%;
+    margin-bottom: 10%;
+}
+.rightPart{
+    width: 45%;
+    height: 100%;
+    float: left;
+}
+.rightPart1{
+    width: 100%;
+    height: 376px;
+    padding-top: 52%;
+}
+.rightPart1 p,.rightPart1 img,.rightPart2 p,.rightPart3 p,.rightPart4 p,.rightPart5 p,.rightPart6 p{
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+    float: left;
+    line-height: 25px;
+}
+.rightPart1 p{
+    margin-bottom: 1%;
+}
+.rightPart2{
+    width: 100%;
+    height: 217px;
+}
+.rightPart3,.rightPart4,.rightPart5{
+    width: 100%;
+    height: 160px;
+}
+.rightPart6{
+    width: 100%;
+    height: 80px;
+}
+
+.bottom{
+    margin: 0 auto;
+    height: 120px;
+    background-color: #65360a;
+    background: url("../images/topMenuPicture.png")center center;
+}
+
+.part1{
+    width: 44.5%;
+    height: 100%;
+    float: left;
+}
+.logoPicture{
+    width: 95px;
+    height: 63px;
+    padding-left: 23%;
+    padding-top: 30px;
+    float: left;
+}
+.text2{
+    font-family: "Microsoft YaHei";
+    color: #f7f6f4;
+    font-size: 13px;
+    float: left;
+    margin-left: 2%;
+    margin-top: 7%;
+}
+
+.packageLogo{
+    width: 15%;
+    height: 90%;
+    margin-top: 1%;
+    float: left;
+}
+.contactInformation{
+    width: 30%;
+    height: 100%;
+    float: left;
+    color: #f7f6f4;
+}
+.contacts,.emails{
+    width: 300px;
+    height: 40px;
+}
+.contacts p,.contacts img,.email p,.email img{
+    float: left;
+}
+
+.contacts p,.email p{
+    font-size: 14px;
+    margin-top: 3%;
+    font-family: "Microsoft YaHei";
+}
+.contacts{
+    margin-top: 5%;
+}
+.email{
+    margin-left: 15%;
+}
+
+
+.menuContent :hover{
+    background-color: white;
+    color: #65360a;
+}
+

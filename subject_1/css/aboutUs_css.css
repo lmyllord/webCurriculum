@@ -1,0 +1,270 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body,html{
+    width: 100%;
+    height: 1430px;
+    display:inline;
+    color: #333;
+}
+
+.topMenu{
+    width: 100%;
+    height: 100px;
+    background-color: #65360a;
+    background: url("../images/topMenuPicture.png") center center;
+
+}
+.menuContent {
+    width: 130px;
+    height: 100px;
+    font-family: "Microsoft YaHei";
+    font-size: 15px;
+    color: #fff;
+    float:left;
+    line-height: 100px;
+}
+.menuContent a{
+    text-decoration: none;
+    color: white;
+}
+
+.menuContentLogo{
+    width: 130px;
+    height: 100px;
+    font-family: "Microsoft YaHei";
+    font-size: 15px;
+    color: #fff;
+    float:left;
+    line-height: 100px;
+}
+.menuContent p{
+    height: 100px;
+    text-align: center;
+}
+
+#menuContent6{
+    background-color: #fff;
+    color: #65360a;
+
+}
+.content{
+    width:915px;
+    height: 100px;
+    margin: 0  auto;
+    /*margin-left:16%;*/
+}
+
+.circle{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #8e6947;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    margin-top: 4px;
+    margin-left: 18%;
+    opacity:0.5;/*设置透明度*/
+    font-family: "STXingkai";
+    font-size: 20px;
+}
+
+.circle p{
+    height: 100px;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+}
+
+.publicityShow{
+    height: 650px;
+    background-color: #fce5d4;
+}
+
+.turnLeft{
+    padding-top: 21%;
+    height: 100px;
+    width: 100px;
+    float: left;
+    opacity:0.7;/*设置透明度*/
+}
+
+.turnRight{
+    padding-top: 21%;
+    opacity:0.7;/*设置透明度*/
+    float: right;
+}
+
+.doughuntPicture{
+    padding-top: 30px;
+    width: 570px;
+    height: 590px;
+    float: left;
+}
+
+.advertisingText{
+    margin-left: 5%;
+    margin-top: 10%;
+    width: 340px;
+    height: 200px;
+    float: left;
+    color: #ee7023;
+}
+
+.firstLine{
+    width: 200px;
+    height: 35px;
+    font-family: "STHupo";
+    font-size: 35px;
+    padding-top: 37%;
+}
+
+.secondLine{
+    font-family: "STHupo";
+    width: 368px;
+    height: 90px;
+    margin-top: 5%;
+}
+.secondLineA,.secondLineB{
+    width: 180px;
+    font-size: 45px;
+    float: left;
+}
+.secondLineA{
+    border-style: solid;
+    border-color: #ee7023;
+    border-width: 2px;
+}
+
+.lastLine{
+    width: 230px;
+    font-size: 15px;
+    margin-left: 24%;
+    color: white;
+    background-color: #ee7023;
+    font-family: "Microsoft YaHei";
+}
+
+.textIntroduction{
+    font-size: 35px;
+    height: 560px;
+    background-color: #f7f6f4;
+}
+.packageText{
+    width: 70%;
+    height: 350px;
+    margin: 0 auto;
+}
+.qiyeSubject{
+    color: #65360a;
+    width: 100%;
+    height: 50px;
+    float: left;
+}
+.packageHr{
+    width: 42.5%;
+    height: 5px;
+    padding-top: 3%;
+    float: left;
+}
+.qiyeSubject hr{
+    height: 1px;
+    border-color:  #65360a;
+    background-color:  #65360a;
+}
+
+.text1{
+    margin-top: 1.5%;
+    float: left;
+    font-size: 18px;
+}
+
+.text1 p{
+    font-weight: bold;
+    line-height: 27px;
+}
+
+.text1 span{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.specificText{
+    font-size: 15px;
+    padding-top: 7%;
+    font-family: "Microsoft YaHei";
+}
+.specificText p{
+    text-indent: 2em;/*缩进*/
+    line-height: 30px;
+}
+
+.bottom{
+    margin: 0 auto;
+    height: 120px;
+    background-color: #65360a;
+    background: url("../images/topMenuPicture.png")center center;
+}
+
+.part1{
+    width: 44.5%;
+    height: 100%;
+    float: left;
+}
+.logoPicture{
+    width: 95px;
+    height: 63px;
+    padding-left: 23%;
+    padding-top: 30px;
+    float: left;
+}
+.text2{
+    font-family: "Microsoft YaHei";
+    color: #f7f6f4;
+    font-size: 13px;
+    float: left;
+    margin-left: 2%;
+    margin-top: 7%;
+}
+
+.packageLogo{
+    width: 15%;
+    height: 90%;
+    margin-top: 1%;
+    float: left;
+}
+.contactInformation{
+    width: 30%;
+    height: 100%;
+    float: left;
+    color: #f7f6f4;
+}
+.contacts,.emails{
+    width: 300px;
+    height: 40px;
+}
+.contacts p,.contacts img,.email p,.email img{
+    float: left;
+}
+
+.contacts p,.email p{
+    font-size: 14px;
+    margin-top: 3%;
+    font-family: "Microsoft YaHei";
+}
+.contacts{
+    margin-top: 5%;
+}
+.email{
+    margin-left: 15%;
+}
+
+.menuContent :hover{
+    background-color: white;
+    color: #65360a;
+}
+
+
